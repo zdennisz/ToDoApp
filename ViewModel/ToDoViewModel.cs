@@ -29,9 +29,9 @@ namespace ToDoApp
         public ToDoViewModel()
         {
             itemHandler = new ItemHandler();
-            itemHandler.Add(new ToDoItem("Buy Milk"));
-            itemHandler.Add(new ToDoItem("Buy Cheese"));
-            itemHandler.Add(new ToDoItem("Take over the world"));
+            itemHandler.Add(new ToDoItem("Buy Milk","1",true));
+            itemHandler.Add(new ToDoItem("Buy Cheese","2", false));
+            itemHandler.Add(new ToDoItem("Take over the world","3", false));
         }
 
         public List<ToDoItem> ToDoItems
