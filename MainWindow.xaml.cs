@@ -23,6 +23,8 @@ namespace ToDoApp
         public MainWindow()
         {
             InitializeComponent();
+            ToDoViewModel toDoViewModel = new ToDoViewModel();
+            myListView.ItemsSource = toDoViewModel.ToDoItems;
         }
     }
 }
