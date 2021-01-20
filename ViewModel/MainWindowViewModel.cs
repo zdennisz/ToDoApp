@@ -22,11 +22,11 @@ namespace ToDoApp
         }
     }
 
-    public class ToDoViewModel
+    public class MainWindowViewModel
     {
         private readonly ItemHandler itemHandler;
 
-        public ToDoViewModel()
+        public MainWindowViewModel()
         {
             itemHandler = new ItemHandler();
             itemHandler.Add(new ToDoItem("Buy Milk","1",true));

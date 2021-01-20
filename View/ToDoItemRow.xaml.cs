@@ -13,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ToDoApp
+namespace ToDoApp.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ToDoItemContainer.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ToDoItemRow : UserControl
     {
-        public MainWindow()
+        public ToDoItemRow()
         {
             InitializeComponent();
-            MainWindowViewModel toDoViewModel = new MainWindowViewModel();
-            myListView.ItemsSource = toDoViewModel.ToDoItems;
         }
     }
 }
