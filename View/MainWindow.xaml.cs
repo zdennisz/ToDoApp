@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ToDoApp.View;
 
 namespace ToDoApp
 {
@@ -20,11 +22,22 @@ namespace ToDoApp
     /// </summary>
     public partial class MainWindow : Window
     {
+         AddNewToDo addNewToDO;
+
         public MainWindow()
         {
             InitializeComponent();
             MainWindowViewModel toDoViewModel = new MainWindowViewModel();
             myListView.ItemsSource = toDoViewModel.ToDoItems;
+        }
+
+        private void btnAddNewToDo(object sender, RoutedEventArgs e)
+        {
+
+
+            addNewToDO = new AddNewToDo();
+            addNewToDO.Show();
+
         }
     }
 }

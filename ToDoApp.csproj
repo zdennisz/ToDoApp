@@ -56,10 +56,18 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\ToDoItem.cs" />
+    <Compile Include="ViewModel\AddNewToDoViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="View\AddNewToDo.xaml.cs">
+      <DependentUpon>AddNewToDo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ToDoItemRow.xaml.cs">
       <DependentUpon>ToDoItemRow.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\AddNewToDo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
