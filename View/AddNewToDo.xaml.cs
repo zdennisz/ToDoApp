@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ToDoApp.ViewModel;
 
 namespace ToDoApp.View
 {
@@ -22,6 +23,13 @@ namespace ToDoApp.View
         public AddNewToDo()
         {
             InitializeComponent();
+            AddNewToDoViewModel addNewToDoViewModel = new AddNewToDoViewModel();
+            
+        }
+
+        private void AddNewItem(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

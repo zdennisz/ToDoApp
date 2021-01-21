@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:ToDoApp"
              StartupUri="View\MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="ButtonsBasicStyle">
+            <Setter Property="Control.FontSize" Value="18"/>
+            <Setter Property="Control.Cursor" Value="Hand"/>
+            <Setter Property="Control.FontFamily" Value="Segoe UI"/>
+            <Setter Property="Control.Foreground" Value="#FF997BEA"/>
+            <Setter Property="Control.Background" Value="#FFFDD97A"/>
+        </Style>
     </Application.Resources>
 </Application>

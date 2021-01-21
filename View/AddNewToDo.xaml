@@ -23,7 +23,7 @@
 
         <TextBlock Grid.Row="1" Grid.Column="1" Text="New To Do : " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBlock>
         <TextBox Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" MinWidth="150" />
-        <Button Grid.Row="2" Grid.Column="1" Content="Add" Margin="25" Cursor="Hand" FontSize="18" Background="#FFFDD97A" Foreground="#FF997BEA" ></Button>
-        <Button Grid.Row="2" Grid.Column="2"  Content="Discard"  Margin="25" Cursor="Hand" FontSize="18" Background="#FFFDD97A" Foreground="#FF997BEA" ></Button>
+        <Button Grid.Row="2" Grid.Column="1" Content="Add" Margin="25" Click="AddNewItem" Style="{Binding Mode=OneWay, Source={StaticResource ButtonsBasicStyle}}" ></Button>
+        <Button Grid.Row="2" Grid.Column="2"  Content="Discard"  Margin="25"  Style="{Binding Mode=OneWay, Source={StaticResource ButtonsBasicStyle}}" ></Button>
     </Grid>
 </Window>

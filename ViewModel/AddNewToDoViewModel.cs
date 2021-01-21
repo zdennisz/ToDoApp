@@ -8,5 +8,13 @@ namespace ToDoApp.ViewModel
 {
     class AddNewToDoViewModel
     {
+
+        public AddNewToDoViewModel()
+        {
+
+        }
+        
+
+
     }
 }
