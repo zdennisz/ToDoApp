@@ -25,10 +25,10 @@
         <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" 
                    FontSize="24" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Revalia"
                    >ToDo's</TextBlock>
-        <ListView x:Name="myListView"  Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="2">
+        <ListView x:Name="myListView"  Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="2" ItemsSource="{Binding ToDoItems}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <view:ToDoItemRow/>
+                    <view:ToDoItemRow x:Name="row"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

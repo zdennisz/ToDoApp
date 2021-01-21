@@ -28,9 +28,7 @@ namespace ToDoApp
         {
             InitializeComponent();
             toDoViewModel=new MainWindowViewModel();
-            DataContext = toDoViewModel;
-           //this is a hack need to fix this
-            myListView.ItemsSource = toDoViewModel.ToDoItems;
+            DataContext = toDoViewModel;  
         }
 
         private void btnAddNewToDo(object sender, RoutedEventArgs e)
