@@ -23,17 +23,18 @@ namespace ToDoApp
     public partial class MainWindow : Window
     {
          AddNewToDo addNewToDO;
-
+        private readonly MainWindowViewModel toDoViewModel;
         public MainWindow()
         {
             InitializeComponent();
-            MainWindowViewModel toDoViewModel = new MainWindowViewModel();
+            toDoViewModel=new MainWindowViewModel();
+            DataContext = toDoViewModel;
+           //this is a hack need to fix this
             myListView.ItemsSource = toDoViewModel.ToDoItems;
         }
 
         private void btnAddNewToDo(object sender, RoutedEventArgs e)
         {
-
 
             addNewToDO = new AddNewToDo();
             addNewToDO.Show();

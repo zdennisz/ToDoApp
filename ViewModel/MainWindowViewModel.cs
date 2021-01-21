@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace ToDoApp
 {
@@ -23,7 +24,7 @@ namespace ToDoApp
         }
     }
 
-    public class MainWindowViewModel
+    public class MainWindowViewModel : INotifyPropertyChanged
     {
         private readonly ItemHandler itemHandler;
 
@@ -40,5 +41,14 @@ namespace ToDoApp
             get { return itemHandler.ToDoItems; }
         }
 
+        
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChange(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
 }
