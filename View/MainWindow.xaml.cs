@@ -22,7 +22,7 @@ namespace ToDoApp
     /// </summary>
     public partial class MainWindow : Window
     {
-         AddNewToDo addNewToDO;
+        private AddNewToDo addNewToDO;
         private readonly MainWindowViewModel toDoViewModel;
         public MainWindow()
         {

@@ -9,6 +9,9 @@ namespace ToDoApp.ViewModel
 {
     class AddNewToDoViewModel: INotifyPropertyChanged
     {
+        private string newToDo;
+        public string NewToDoName { get { return newToDo; } set { newToDo = value; } }
+
 
         public AddNewToDoViewModel()
         {

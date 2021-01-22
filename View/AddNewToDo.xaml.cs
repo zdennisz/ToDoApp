@@ -20,16 +20,26 @@ namespace ToDoApp.View
     /// </summary>
     public partial class AddNewToDo : Window
     {
+        private readonly AddNewToDoViewModel addNewToDoViewModel;
         public AddNewToDo()
         {
             InitializeComponent();
-            AddNewToDoViewModel addNewToDoViewModel = new AddNewToDoViewModel();
-            
+            addNewToDoViewModel = new AddNewToDoViewModel();
+            DataContext = addNewToDoViewModel;
+          
         }
 
         private void AddNewItem(object sender, RoutedEventArgs e)
         {
-            
+            // add new item to the list 
+            //and close the window
+            this.Close();
+        }
+
+        private void btn_CloseNewWindow(object sender, RoutedEventArgs e)
+        {
+            //close the window
+            this.Close();
         }
     }
 }

@@ -21,9 +21,9 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="New To Do : " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBlock>
-        <TextBox Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" MinWidth="150" />
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="New To Do : " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" ></TextBlock>
+        <TextBox x:Name="txtBox" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" MinWidth="150" Text="{Binding NewToDoName}" />
         <Button Grid.Row="2" Grid.Column="1" Content="Add" Margin="25" Click="AddNewItem" Style="{Binding Mode=OneWay, Source={StaticResource ButtonsBasicStyle}}" ></Button>
-        <Button Grid.Row="2" Grid.Column="2"  Content="Discard"  Margin="25"  Style="{Binding Mode=OneWay, Source={StaticResource ButtonsBasicStyle}}" ></Button>
+        <Button Grid.Row="2" Grid.Column="2"  Content="Discard"  Margin="25"  Style="{Binding Mode=OneWay, Source={StaticResource ButtonsBasicStyle}}" Click="btn_CloseNewWindow" ></Button>
     </Grid>
 </Window>
