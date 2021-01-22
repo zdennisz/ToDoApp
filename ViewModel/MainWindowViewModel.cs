@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace ToDoApp
@@ -11,11 +13,11 @@ namespace ToDoApp
 
     public class ItemHandler
     {
-        public List<ToDoItem> ToDoItems { get; private set; }
+        public ObservableCollection<ToDoItem> ToDoItems { get; private set; }
 
         public ItemHandler()
         {
-            ToDoItems = new List<ToDoItem>();
+            ToDoItems = new ObservableCollection<ToDoItem>();
         }
 
         public void Add(ToDoItem item)
@@ -26,6 +28,7 @@ namespace ToDoApp
 
     public class MainWindowViewModel : INotifyPropertyChanged
     {
+
         private readonly ItemHandler itemHandler;
 
         public MainWindowViewModel()
@@ -36,7 +39,7 @@ namespace ToDoApp
             itemHandler.Add(new ToDoItem("Take over the world","3", false));
         }
 
-        public List<ToDoItem> ToDoItems
+        public ObservableCollection<ToDoItem> ToDoItems
         {
             get { return itemHandler.ToDoItems; }
         }
